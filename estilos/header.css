@@ -2,9 +2,14 @@ header {
 
     display: flex;
     justify-content: space-between;
-   
+
     
-    margin: 20px 80px 40px 80px;
+    margin: 20px 80px 0px 80px;
+}
+
+header > .material-symbols-outlined {
+    font-size: 40px;
+    cursor: pointer;
 }
 
 header > h1 {
@@ -20,4 +25,13 @@ div#button_flag > img {
     width: 80px;
     cursor: pointer;
     border-radius: 25px;
+}
+
+div#line::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--acento_roxo_vibrante);
+
 }

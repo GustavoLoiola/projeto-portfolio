@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+/*
+Background principal (azul escuro quase preto):  #0B0F1A
+Background secundário (cards): #141A2A
+Primária (azul escuro tecnológico): #1E2A5A
+Secundária (roxo elegante): #6D5DFB
+Acento (roxo vibrante): #8F7CFF
+
+Neutros
+
+Texto principal
+#EAEAF0
+
+Texto secundário
+#B3B6C5
+
+Bordas/divisórias
+#2A3150
+
+*/
+
+:root {
+  --background_principal_azul_quase_preto: #0B0F1A;
+  --background_secundário_cards: #141A2A;
+  --primária_azul_escuro_tecnológico: #1E2A5A;
+  --secundária_roxo_elegante: #6D5DFB;
+  --acento_roxo_vibrante: #8F7CFF;
+  --texto_principal: #EAEAF0;
+  --texto_secundario: #B3B6C5;
+  --bordas_e_divisorias:rgb(217, 0, 255)0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    background-color:  var(--background_principal_azul_quase_preto, #000000);
+    color: var(--texto_principal);
+}
+
