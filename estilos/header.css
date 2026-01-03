@@ -1,0 +1,23 @@
+header {
+
+    display: flex;
+    justify-content: space-between;
+   
+    
+    margin: 20px 80px 40px 80px;
+}
+
+header > h1 {
+    text-align: center;
+}
+
+div#button_flag {
+    display: flex;
+    justify-content: right;
+}
+
+div#button_flag > img {
+    width: 80px;
+    cursor: pointer;
+    border-radius: 25px;
+}
