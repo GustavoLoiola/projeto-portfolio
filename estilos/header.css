@@ -32,6 +32,6 @@ div#line::after {
     position: absolute;
     width: 100%;
     height: 2px;
-    background-color: var(--acento_roxo_vibrante);
+    background-color: var(--roxo_luminoso);
 
 }

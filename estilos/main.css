@@ -20,9 +20,52 @@ div#hello > h1 {
 
 div#hello > h2 {
     font-size: 2em;
+    color: var(--texto_secundario);
 }
 
+div#contact_buttons {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
 
+}
+
+div#contact_buttons > div#cv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 140px;
+    height: 40px;
+    cursor: pointer;
+    background-color: var(--acento_roxo_vibrante);
+    color: var(--texto_principal);
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+div#contact_buttons > div#cv:hover {
+    background-color: var(--roxo_luminoso);
+    transition: 0.4s;
+}
+
+div#contact_buttons > div#contact_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 40px;
+    cursor: pointer;
+    background-color: var(--roxo_luminoso);
+    color: var(--texto_principal);
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+div#contact_buttons > div#contact_button:hover {
+    background-color: var(--acento_roxo_vibrante);
+    transition: 0.4s;
+}
 
 div#photo {
   width: 450px;
@@ -39,4 +82,19 @@ div#photo > img {
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
+}
+
+
+article > h1 {
+    text-align: center;
+    font-size: 2em;
+    margin: 80px 0px 20px 0px;
+}
+
+article > p {
+    text-align: center;
+    font-size: 1.1em;
+    line-height: 180%;
+    width: 800px;
+    margin: auto;
 }

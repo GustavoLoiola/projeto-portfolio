@@ -1,0 +1,32 @@
+section#skills {
+    width: 80vw;
+    margin: auto;
+    margin-top: 80px;
+}
+
+section#skills > h1 {
+    text-align: center;
+}
+
+div#skills_area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+div#skill {
+    width: 130px;
+    height: 160px;
+    border: 5px solid yellow;
+    border-radius: 5px;
+}
+
+div#skill > p {
+    text-align: center;
+    color: var(--acento_roxo_vibrante);
+}
+
+div#skill > img {
+    width: 100px;
+}
