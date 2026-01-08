@@ -34,7 +34,7 @@ header > h1 {
   width: 60px;
   height: 28px;
   cursor: pointer;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .toggle input {
@@ -86,7 +86,7 @@ div#button_flag {
     justify-content: right;
     align-items: center;
 
-    width: 20vw;
+    width: 150px;
 }
 
 div#button_flag > img {
@@ -100,6 +100,6 @@ div#line::after {
     position: absolute;
     width: 100%;
     height: 1px;
-    background-color: var(--roxo_luminoso);
+    background-color: var(--primária_azul_escuro_tecnológico);
 
 }

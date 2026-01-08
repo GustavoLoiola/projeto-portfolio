@@ -86,6 +86,7 @@ div#photo {
   border-radius: 50%;
 
   background: linear-gradient(135deg, #1E2A5A, #6D5DFB, #8F7CFF);
+  transition: 0.6s;
 }
 
 div#photo > img {
@@ -95,6 +96,10 @@ div#photo > img {
   object-fit: cover;
 }
 
+div#photo:hover {
+    transform: scale(0.95);
+    
+}
 
 article > h1 {
     text-align: center;
