@@ -6,6 +6,7 @@ main {
 
 div#hello {
     margin-top: 80px;
+    width: 30vw;
 }
 
 div#hello > h1 > span {
@@ -15,11 +16,11 @@ div#hello > h1 > span {
 div#hello > h1 {
     font-size: 3em;
     color: var(--texto_principal);
-    width: 400px;
+    width: 380px;
 }
 
 div#hello > h2 {
-    font-size: 2em;
+    font-size: 1.5em;
     color: var(--texto_secundario);
 }
 
@@ -27,7 +28,8 @@ div#contact_buttons {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr;
-
+    width: 22vw;
+    
 }
 
 div#contact_buttons > div#cv {
@@ -35,36 +37,45 @@ div#contact_buttons > div#cv {
     justify-content: center;
     align-items: center;
 
-    width: 140px;
+    width: 120px;
     height: 40px;
     cursor: pointer;
-    background-color: var(--acento_roxo_vibrante);
+    background-image: linear-gradient(to right, var(--acento_roxo_vibrante), var(--roxo_luminoso));
     color: var(--texto_principal);
     margin-top: 20px;
-    border-radius: 10px;
+    border-radius: 50px;
+    transition: 0.4s;
 }
 
 div#contact_buttons > div#cv:hover {
-    background-color: var(--roxo_luminoso);
-    transition: 0.4s;
+     transform: translateY(2px);
+     box-shadow: 0 4px 0 var(--primária_azul_escuro_tecnológico);
+}
+
+div#contact_buttons > div#cv > a {
+    text-decoration: none;
+    color: var(--texto_principal);
 }
 
 div#contact_buttons > div#contact_button {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 140px;
+    width: 160px;
     height: 40px;
     cursor: pointer;
-    background-color: var(--roxo_luminoso);
+    background-color: transparent;
+    border: 1px solid var(--roxo_luminoso);
     color: var(--texto_principal);
     margin-top: 20px;
-    border-radius: 10px;
+    border-radius: 50px;
+    transition: 0.4s;
 }
 
 div#contact_buttons > div#contact_button:hover {
-    background-color: var(--acento_roxo_vibrante);
-    transition: 0.4s;
+     transform: translateY(2px);
+     box-shadow: 0 4px 0 var(--primária_azul_escuro_tecnológico);
+     background-image: linear-gradient(to right, var(--acento_roxo_vibrante), var(--roxo_luminoso));
 }
 
 div#photo {

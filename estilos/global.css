@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+
 /*
 Background principal (azul escuro quase preto):  #0B0F1A
 Background secundário (cards): #141A2A
@@ -41,5 +42,6 @@ Bordas/divisórias
 body {
     background-color:  var(--background_principal_azul_quase_preto, #000000);
     color: var(--texto_principal);
+    font-family: "inter", sans-serif;
 }
 
