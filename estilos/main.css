@@ -1,6 +1,7 @@
 main {
     display: flex;
     justify-content: space-around;
+
     margin: 60px 0px 0px 0px;
 }
 
@@ -79,14 +80,15 @@ div#contact_buttons > div#contact_button:hover {
 }
 
 div#photo {
-  width: 450px;
-  height: 450px;
 
-  padding: 5px;
-  border-radius: 50%;
+    width: 450px;
+    height: 450px;
 
-  background: linear-gradient(135deg, #1E2A5A, #6D5DFB, #8F7CFF);
-  transition: 0.6s;
+    padding: 5px;
+    border-radius: 50%;
+
+    background: linear-gradient(135deg, #1E2A5A, #6D5DFB, #8F7CFF);
+    transition: 0.6s;
 }
 
 div#photo > img {
