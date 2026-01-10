@@ -6,7 +6,7 @@ header {
 
     
     height: 10vh;
-    width: 90vw;
+    width: 90%;
     margin: auto;
 }
 
@@ -26,6 +26,7 @@ header > h1 {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    margin: 0;
 }
 
 .toggle {

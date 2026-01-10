@@ -1,0 +1,93 @@
+section#projects {
+    width: 90%;
+    margin: auto;
+}
+
+section#projects > h1 {
+    color: var(--texto_principal);
+    margin: 80px 0px 40px 0px;
+    text-align: center;
+    font-size: 2em;
+}
+
+section#projects > h2 {
+    color: var(--texto_principal);
+    margin-bottom: 40px;
+    width: fit-content; /* h2 fica do tamanho do texto */
+    position: relative; /* referência para o ::after */
+}
+
+section#projects > h2::after {
+   content: "";
+    display: block;
+    width: 80%;
+    height: 3px;
+    background-color: var(--roxo_luminoso);
+}
+
+section#projects > div#all {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    justify-content: center;
+    flex-shrink: 0;
+    flex-grow: 1;
+    gap: 50px;
+    width: 100%;
+    margin: auto;
+}
+
+section#projects > div#all > div.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+
+    min-width: 410px;
+    height: 200px;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.500); /* escurece */
+    background-blend-mode: multiply;
+
+    cursor: pointer;
+}
+
+section#projects > div#all > div.project::before {
+    background-color: rgba(0, 0, 0, 0.704);
+}
+
+div.project > p {
+    color: var(--texto_principal);
+}
+
+#dalia {
+    background-image: url(../imagens/prints/cordel.png);
+}
+
+#mario {
+      background-image: url(../imagens/prints/mario.png);    
+      
+}
+
+#login {
+      background-image: url(../imagens/prints/login.png);
+}
+
+#android {
+      background-image: url(../imagens/prints/android.png);
+}
+
+#social {
+      background-image: url(../imagens/prints/social.png);
+}
+
+#cordel {
+      background-image: url(../imagens/prints/cordel.png);
+}

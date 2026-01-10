@@ -1,5 +1,5 @@
 section#skills {
-    width: 80vw;
+    width: 90%;
     margin: auto;
     margin-top: 80px;
 }
@@ -16,7 +16,7 @@ div#skills_area {
     flex-wrap: wrap;
 }
 
-div#skill {
+div.skill {
     display: flex;
     flex-direction: column;
 
@@ -45,25 +45,23 @@ div#skill {
   );
 }
 
-div#skill:hover {
+div.skill:hover {
     transform: scale(1.1);
 }
 
-div#skill > div.skill_line {
+div.skill > div.skill_line {
     width: 110px;
     height: 1px;
     background-color: var(--roxo_luminoso);
 }
 
 
-div#skill > p {
+div.skill > p {
     text-align: center;
     color: var(--texto_secundario);
 }
 
-div#skill > img {
+div.skill > img {
     width: 70px;
     height: 70px;
-
-  
 }
