@@ -6,7 +6,7 @@ section#skills {
 
 section#skills > h1 {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 div#skills_area {
@@ -64,4 +64,10 @@ div.skill > p {
 div.skill > img {
     width: 70px;
     height: 70px;
+}
+
+div.skill > svg {
+    width: 70px;
+    height: 70px;
+    fill: rgb(251, 0, 255);
 }

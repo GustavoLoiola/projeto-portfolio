@@ -1,0 +1,67 @@
+footer > h1 {
+    text-align: center;
+    margin: 80px auto 40px auto;
+}
+
+footer > section {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-bottom: 300px;
+}
+
+footer > section > div.contact_area {
+    width: 200px;
+}
+
+footer > section > div.contact_area > a{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 10px;
+
+    height: 100px;
+    width: 25%;
+
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
+footer > section > div.contact_area > a:hover {
+    transform: scale(1.2);
+}
+
+footer > section > div.contact_area > a > div {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    width: 70px;
+    background-color: var(--background_secundário_cards);
+    border-radius: 50%;
+}
+
+footer > section > div.contact_area > a > div >img {
+    width: 30px;
+    margin: auto;
+    cursor: pointer;
+}
+
+footer > section > div.contact_area > a > h2 {
+    color: var(--texto_principal);
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+footer > section > div.contact_area > a > p {
+    color: var(--texto_secundario);
+    cursor: pointer;
+    font-size: 0.8em;
+}

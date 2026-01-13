@@ -104,16 +104,30 @@ div#photo:hover {
     
 }
 
-article > h1 {
+article {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
     text-align: center;
+}
+
+article > h1 {
     font-size: 2em;
     margin: 80px 0px 20px 0px;
 }
 
 article > p {
-    text-align: center;
     font-size: 1.1em;
     line-height: 180%;
     width: 800px;
     margin: auto;
+}
+
+@media (max-width: 950px) {
+  article > p {
+    text-align: justify;
+    max-width: 90%;
+    font-size: 1rem;
+  }
 }
