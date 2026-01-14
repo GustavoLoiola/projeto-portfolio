@@ -14,7 +14,7 @@ div#hello {
 }
 
 div#hello > h1 > span {
-    color: var(--acento_roxo_vibrante);
+    color: var(--secundária_roxo_elegante);
 }
 
 div#hello > h1 {
@@ -42,7 +42,7 @@ div#contact_buttons > div#cv {
     justify-content: center;
     align-items: center;
 
-    width: 120px;
+    width: min(120px, 90%);
     height: 40px;
     cursor: pointer;
     background-image: linear-gradient(to right, var(--acento_roxo_vibrante), var(--roxo_luminoso));
@@ -66,7 +66,7 @@ div#contact_buttons > div#contact_button {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 160px;
+    width: min(160px, 90%);
     height: 40px;
     cursor: pointer;
     background-color: transparent;
@@ -85,9 +85,8 @@ div#contact_buttons > div#contact_button:hover {
 
 div#photo {
     position: relative;
-    width: min(450px, 70vw);
+    width: min(450px, 80vw);
     aspect-ratio: 1 / 1;
-    border-radius: 50%;
     transition: 0.3s;
 }
 

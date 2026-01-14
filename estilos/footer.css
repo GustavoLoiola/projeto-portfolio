@@ -12,7 +12,7 @@ footer > section {
 }
 
 footer > section > div.contact_area {
-    width: 200px;
+     width: min(200px, 40vw);
 }
 
 footer > section > div.contact_area > a{

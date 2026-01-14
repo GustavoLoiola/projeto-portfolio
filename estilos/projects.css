@@ -23,7 +23,7 @@ section#projects > h2::after {
     display: block;
     width: 80%;
     height: 3px;
-    background-color: var(--roxo_luminoso);
+    background-color: var(--secundária_roxo_elegante);
 }
 
 section#projects > div#all {
@@ -49,7 +49,7 @@ section#projects > div#all > div.project {
     align-items: center;
     justify-content: center;
 
-    min-width: 410px;
+    width: min(410px, 80vw);
     height: 200px;
 
     background-size: cover;
@@ -57,7 +57,7 @@ section#projects > div#all > div.project {
     background-repeat: no-repeat;
 
     cursor: pointer;
-    transition: transform 0.4s ease;
+    transition: transform 0.3s ease;
 }
 
 section#projects > div#all > div.project::after {
@@ -70,11 +70,99 @@ section#projects > div#all > div.project::after {
     z-index: 1;
 }
 
+div.project > p,
+div.project > div.technologies {
+    position: relative;
+    z-index: 2;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+section#projects > div#all > div.project:hover::after {
+    opacity: 0;
+}
+
+section#projects > div#all > div.project:hover > p,
+section#projects > div#all > div.project:hover > div.technologies {
+    opacity: 0;
+    transform: translateY(10px);
+}
 
 section#projects > div#all > div.project:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
     background-color: white;
 }
+
+div.project > div.more {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 40px;
+
+    background: var(--texto_secundario);
+    color: white;
+
+    opacity: 0;
+    transform: translateY(100%);
+    transition: 0.6s;
+    z-index: 2;
+}
+
+div.project:hover > div.more {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+div.project > div.more {
+  opacity: 0;
+}
+
+div.project:hover > div.more {
+  opacity: 1;
+}
+
+div.project > div.more > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100px;
+  height: 30px;
+
+  border-radius: 30px;
+  text-decoration: none;
+  color: var(--texto_principal);
+
+  background: linear-gradient(
+    to right,
+    var(--acento_roxo_vibrante),
+    var(--roxo_luminoso)
+  );
+
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+/* anima SOMENTE quando hover */
+div.project:hover > div.more > a {
+  animation: aparecer 0.9s ease-out forwards;
+}
+
 
 section#projects > div#all > div.project::before {
     background-color: rgba(0, 0, 0, 0.704);
@@ -112,13 +200,4 @@ div.project > div.technologies > img {
 
 #cordel {
       background-image: url(../imagens/prints/cordel.jpeg);
-}
-
-div.project > div.more {
-    display: none;
-    background-color: var(--texto_secundario);
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    width: 100%;
-    height: 30px;
 }
