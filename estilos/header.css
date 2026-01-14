@@ -18,7 +18,7 @@ header > .material-symbols-outlined {
 }
 
 header > .material-symbols-outlined:hover {
-    background-color: var(--roxo_luminoso);
+    background-color: var(--secundária_roxo_elegante);
     transition: 0.2s;
 }
 
@@ -68,7 +68,7 @@ header > h1 {
 
 /* ON */
 .toggle input:checked + .slider {
-  background: var(--primária_azul_escuro_tecnológico);
+  background: var(--secundária_roxo_elegante);
 }
 
 .toggle input:checked + .slider::before {

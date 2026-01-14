@@ -1,14 +1,16 @@
 main {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
     width: 90%;
-
+    width: min(1200px, 90%);
     margin: 60px auto 0px auto;
 }
 
 div#hello {
     margin-top: 80px;
-    width: 30vw;
+    max-width: 420px;
+    width: 100%;
 }
 
 div#hello > h1 > span {
@@ -16,13 +18,13 @@ div#hello > h1 > span {
 }
 
 div#hello > h1 {
-    font-size: 3em;
     color: var(--texto_principal);
-    width: 380px;
+    font-size: clamp(2rem, 5vw, 3rem);
+    width: auto;
 }
 
 div#hello > h2 {
-    font-size: 1.5em;
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
     color: var(--texto_secundario);
 }
 
@@ -30,7 +32,8 @@ div#contact_buttons {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr;
-    width: 22vw;
+    width: 100%;
+    max-width: 320px;
     
 }
 
@@ -81,18 +84,28 @@ div#contact_buttons > div#contact_button:hover {
 }
 
 div#photo {
-
-    width: 450px;
-    height: 450px;
-
-    padding: 5px;
+    position: relative;
+    width: min(450px, 70vw);
+    aspect-ratio: 1 / 1;
     border-radius: 50%;
-
-    background: linear-gradient(135deg, #1E2A5A, #6D5DFB, #8F7CFF);
-    transition: 0.6s;
+    transition: 0.3s;
 }
 
-div#photo > img {
+div#photo::before {
+    content: "";
+    position: absolute;
+    inset: -5px;
+    border-radius: 50%;
+    background: linear-gradient(135deg,
+    var(--roxo_luminoso),
+    var(--acento_roxo_vibrante),
+    var(--background_secundário_cards)
+    );
+    
+    z-index: -1;
+}
+
+div#photo img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -101,7 +114,6 @@ div#photo > img {
 
 div#photo:hover {
     transform: scale(0.95);
-    
 }
 
 article {
@@ -127,7 +139,8 @@ article > p {
 @media (max-width: 950px) {
   article > p {
     text-align: justify;
-    max-width: 90%;
-    font-size: 1rem;
+    max-width: 80%;
+    margin: auto;
+    font-size: 0.9rem;
   }
 }
