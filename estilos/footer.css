@@ -6,6 +6,8 @@ footer > h1 {
 footer > section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    justify-items: center;
+    justify-content: center;
     gap: 60px;
     max-width: 900px;
     margin: 0 auto 200px;
@@ -16,15 +18,15 @@ footer > section > div.contact_area {
 }
 
 footer > section > div.contact_area > a{
-     display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 
-  text-decoration: none;
-  color: inherit;
+    text-decoration: none;
+    color: inherit;
 
-  transition: 0.3s;
+    transition: 0.3s;
 }
 
 footer > section > div.contact_area > a:hover {

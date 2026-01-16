@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-
 /*
 Background principal (azul escuro quase preto):  #0B0F1A
 Background secundário (cards): #141A2A
@@ -22,21 +21,24 @@ Bordas/divisórias
 */
 
 :root {
-  --background_principal_azul_quase_preto: #0B0F1A;
-  --background_secundário_cards: #141A2A;
-  --primária_azul_escuro_tecnológico: #1E2A5A;
-  --secundária_roxo_elegante: #6D5DFB;
-  --acento_roxo_vibrante: #8F7CFF;
-  --texto_principal: #EAEAF0;
-  --texto_secundario: #B3B6C5;
-  --roxo_luminoso: #C609FA;
+    --background_principal_azul_quase_preto: #0B0F1A;
+    --background_secundário_cards: #141A2A;
+    --primária_azul_escuro_tecnológico: #1E2A5A;
+    --secundária_roxo_elegante: #6D5DFB;
+    --acento_roxo_vibrante: #8F7CFF;
+    --texto_principal: #EAEAF0;
+    --texto_secundario: #B3B6C5;
+    --roxo_luminoso: #C609FA;
 
 }
 
+html {
+    scroll-behavior: smooth;
+}
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -44,3 +46,5 @@ body {
     color: var(--texto_principal);
     font-family: "inter", sans-serif;
 }
+
+/* TESTE DE MENU*/
