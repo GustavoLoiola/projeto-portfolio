@@ -15,11 +15,12 @@ div#hello {
 
 div#hello > h1 > span {
     color: var(--secundária_roxo_elegante);
+    font-size: clamp(1.5rem, 5vw, 3rem);
 }
 
 div#hello > h1 {
     color: var(--texto_principal);
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(1.5rem, 5vw, 3rem);
     width: auto;
 }
 
@@ -60,6 +61,7 @@ div#contact_buttons > div#cv:hover {
 div#contact_buttons > div#cv > a {
     text-decoration: none;
     color: var(--texto_principal);
+    font-size: clamp(0.7rem, 2vw, 1rem);
 }
 
 div#contact_buttons > div#contact_button {
@@ -75,6 +77,10 @@ div#contact_buttons > div#contact_button {
     margin-top: 20px;
     border-radius: 50px;
     transition: 0.4s;
+}
+
+div#contact_buttons > div#contact_button > p {
+    font-size: clamp(0.5rem, 2vw, 1rem);
 }
 
 div#contact_buttons > div#contact_button:hover {

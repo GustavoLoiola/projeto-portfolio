@@ -21,28 +21,10 @@ header.menu-open .menu_principal {
   display: flex;
 }
 
-/* ícone */
 #hamburguer {
-  font-family: 'Material Symbols Outlined';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 32px;
-  line-height: 1;
-
   display: inline-block;
   white-space: nowrap;
   direction: ltr;
-
-  /* ISSO É O QUE FAZ O ÍCONE FUNCIONAR */
-  font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 24;
-
-  text-transform: none;
-  -webkit-font-smoothing: antialiased;
-
 
   cursor: pointer;
   font-size: 32px;
@@ -168,6 +150,34 @@ header > h1 {
   outline-offset: 2px;
 }
 
+/*VERSÃO MOBILE*/
+@media (max-width: 768px) {
+  .toggle {
+    width: 42px;
+    height: 22px;
+    margin-right: 3px;
+  }
+
+  /* Fundo */
+  .slider {
+    border-radius: 999px;
+  }
+
+  /* Bolinha */
+  .slider::before {
+    width: 16px;
+    height: 16px;
+    left: 3px;
+    top: 3px;
+  }
+
+  /* ON */
+  .toggle input:checked + .slider::before {
+    transform: translateX(20px);
+  }
+}
+
+
 div#button_flag {
   z-index: 1300;
   display: flex;
@@ -178,7 +188,7 @@ div#button_flag {
 }
 
 div#button_flag > img {
-  width: min(50px, 8vw);
+  width: min(50px, 5vw);
   cursor: pointer;
   border-radius: 25px;
 }
