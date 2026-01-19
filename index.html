@@ -20,20 +20,24 @@
    <header>
     <span class="material-symbols-outlined" id="hamburguer" translate="no">menu</span>
     <nav id="menu" class="menu_principal">
-        <h1>Bem-vindo ao meu Portfólio!</h1>
-        <a href="#about_me">Sobre</a>
-        <a href="#skills">Habilidades</a>
-        <a href="#projects">Projetos</a>
-        <a href="#contact">Contatos</a>
+        <h3 data-i18n="welcome">Bem-vindo ao meu Portfólio!</h3>
+        <a href="#about_me" data-i18n="about">Sobre</a>
+        <a href="#skills" data-i18n="skills">Habilidades</a>
+        <a href="#projects" data-i18n="projects">Projetos</a>
+        <a href="#contact" data-i18n="contact">Contatos</a>
     </nav>
 
-    <h1>Portfólio</h1>
+    <h1 data-i18n="portfolio">Portfólio</h1>
     <div id="button_flag">
         <label class="toggle">
             <input type="checkbox" aria-label="Alternar modo claro e escuro">
             <span class="slider"></span>
         </label>
-        <img src="imagens/Flag_of_Brazil.svg.png" alt="Bandeira do Brasil">
+        <img src="imagens/Flag_of_Brazil.svg.png" alt="Bandeira do Brasil" id="flag">
+        <div id="menu_flag">
+            <img src="imagens/Flag_of_Brazil.svg.png" alt="Português" data-lang="pt">
+            <img src="imagens/Flag_of_the_United_States.svg" alt="English" data-lang="en">
+        </div>
     </div>
     
    </header>
@@ -44,11 +48,15 @@
    <main id="about">
 
     <div id="hello">
-        <h1>Olá, eu sou o <span>Gustavo Loiola!</span></h1>
-        <h2>Desenvolvedor full-stack</h2>
+        <h1>
+            <span data-i18n="hello">Olá, eu sou o</span>
+            <span class="name">Gustavo Loiola!</span>
+        </h1>
+
+        <h2 data-i18n="role">Desenvolvedor full-stack</h2>
             <div id="contact_buttons">
-                <div id="cv"><a href="extras/Gustavo_Loiola_Curriculo.pdf" download="Gustavo_Loiola_Curriculo.pdf">Download CV</a></div>
-                <div id="contact_button"><a href="#contact">Entrar em contato</a></div>
+                <div id="cv"><a href="extras/Gustavo_Loiola_Curriculo.pdf" download="Gustavo_Loiola_Curriculo.pdf" data-i18n="download_cv">Download CV</a></div>
+                <div id="contact_button"><a href="#contact" data-i18n="contact_btn">Entrar em contato</a></div>
             </div>
     </div>
     <div id="photo">
@@ -57,12 +65,12 @@
    </main>
 
    <article id="about_me">
-    <h1>Sobre mim</h1>
-    <p>Desenvolvedor Fullstack em formação e estudante de Ciência da Computação, possuo experiência com JavaScript (Node.js), HTML, CSS, Tailwind CSS, Python e MySQL, com foco na criação de aplicações web modernas, funcionais e bem estruturadas. Estou em constante evolução, sempre buscando aprender novas tecnologias e boas práticas, e procuro uma oportunidade para aplicar meus conhecimentos, crescer profissionalmente e contribuir com projetos reais.</p>
+    <h1 data-i18n="about_me_title">Sobre mim</h1>
+    <p data-i18n="about_me_text">Desenvolvedor Fullstack em formação e estudante de Ciência da Computação, possuo experiência com JavaScript (Node.js), HTML, CSS, Tailwind CSS, Python e MySQL, com foco na criação de aplicações web modernas, funcionais e bem estruturadas. Estou em constante evolução, sempre buscando aprender novas tecnologias e boas práticas, e procuro uma oportunidade para aplicar meus conhecimentos, crescer profissionalmente e contribuir com projetos reais.</p>
    </article>
 
    <section id="skills">
-    <h1>Habilidades</h1>
+    <h1 data-i18n="skills">Habilidades</h1>
     <div id="skills_area">
         <div class="skill">
             <div class="skill_line"></div>
@@ -70,7 +78,6 @@
             <img src="imagens/html5.svg" alt="html5 logo">
         </div>
 
-       
         <div class="skill">
              <div class="skill_line"></div>
              <p>CSS3</p>
@@ -125,62 +132,62 @@
    </section>
 
    <section id="projects">
-    <h1>Projetos</h1>
-    <h2>Todos os projetos</h2>
+    <h1 data-i18n="projects">Projetos</h1>
+    <h2 data-i18n="all_projects">Todos os projetos</h2>
     <div id="all">
         <div class="project" id="dalia">
             <p>Dalia Modas</p>
             <div class="technologies"></div>
             <div class="more">
-                <p>Agosto 2025</p>
-                <a href="#">ver mais</a>
+                <p data-i18n="date_aug_2025">Agosto 2025</p>
+                <a href="#" data-i18n="see_more">ver mais</a>
             </div>
         </div>
         <div class="project" id="mario">
             <p>Mario Galaxy Movie</p>
             <div class="technologies"></div>
             <div class="more">
-                <p>Agosto 2025</p>
-                <a href="#">ver mais</a>
+                <p data-i18n="date_aug_2025">Agosto 2025</p>
+                <a href="#" data-i18n="see_more">ver mais</a>
             </div>
         </div>
 
         <div class="project" id="login">
-            <p>Tela de Login</p>
+            <p data-i18n="login_project">Tela de Login</p>
             <div class="technologies"></div>
             <div class="more">
-                <p>Agosto 2025</p>
-                <a href="#">ver mais</a>
+                <p data-i18n="date_aug_2025">Agosto 2025</p>
+                <a href="#" data-i18n="see_more">ver mais</a>
             </div>
         </div>
 
         <div class="project" id="android">
-            <p>Projeto Android</p>
+            <p data-i18n="android_project">Projeto Android</p>
             <div class="technologies">
               <img src="imagens/css3.svg" alt="" srcset="">
               <img src="imagens/html5.svg" alt="">
             </div>
             <div class="more">
-                <p>Agosto 2025</p>
-                <a href="#">ver mais</a>
+                <p data-i18n="date_aug_2025">Agosto 2025</p>
+                <a href="#" data-i18n="see_more">ver mais</a>
             </div>
         </div>
 
         <div class="project" id="social">
-            <p>Projeto Redes Sociais</p>
+            <p data-i18n="social_project">Projeto Redes Sociais</p>
             <div class="technologies"></div>
             <div class="more">
-                <p>Agosto 2025</p>
-                <a href="#">ver mais</a>
+                <p data-i18n="date_aug_2025">Agosto 2025</p>
+                <a href="#" data-i18n="see_more">ver mais</a>
             </div>
         </div> 
 
         <div class="project" id="cordel">
-            <p>Projeto Cordel</p>
+            <p data-i18n="cordel_project">Projeto Cordel</p>
             <div class="technologies"></div>
             <div class="more">
-                <p>Agosto 2025</p>
-                <a href="#">ver mais</a>
+                <p data-i18n="date_aug_2025">Agosto 2025</p>
+                <a href="#" data-i18n="see_more">ver mais</a>
             </div>
         </div>
 
@@ -188,7 +195,7 @@
    </section>
 
    <footer id="contact">
-    <h1>Contatos</h1>
+    <h1 data-i18n="contacts">Contatos</h1>
 
     <section>
         <div class="contact_area">
@@ -202,7 +209,7 @@
         <div class="contact_area">
             <a href="https://wa.me/551168703800" target="_blank">
                 <div><img src="imagens/telephone_icon-icons.com_70849.png" alt="Telephone icon"></div>
-                <h2>Telefone</h2>
+                <h2 data-i18n="phone">Telefone</h2>
                 <p>(11) 96870-3800</p>
             </a>
         </div>
@@ -227,5 +234,6 @@
 
 <script src="scripts/menu.js"></script>
 <script src="scripts/light.js"></script>
+<script src="scripts/language.js"></script>
 </body>
 </html>

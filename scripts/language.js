@@ -1,104 +1,99 @@
-/* ===============================
-   SISTEMA DE IDIOMAS
-================================ */
+const flag = document.getElementById('flag');
+const menuFlag = document.getElementById('menu_flag');
+const flags = menuFlag.querySelectorAll('img');
 
+// ================== MENU ==================
+flag.addEventListener('click', (e) => {
+  e.stopPropagation();
+  menuFlag.classList.toggle('active');
+});
+
+document.addEventListener('click', () => {
+  menuFlag.classList.remove('active');
+});
+
+// ================== TRADUÇÕES ==================
 const translations = {
   pt: {
-    nav: {
-      about: "Sobre",
-      skills: "Habilidades",
-      projects: "Projetos",
-      contact: "Contatos"
-    },
-    hero: {
-      title: "Olá, eu sou o Gustavo Loiola!",
-      subtitle: "Desenvolvedor Full Stack"
-    },
-    sections: {
-      about: "Sobre mim",
-      skills: "Habilidades",
-      projects: "Projetos",
-      contact: "Contatos"
-    }
+    title: 'Gustavo Loiola | Desenvolvedor Full Stack',
+    portfolio: 'Portfólio',
+    welcome: 'Bem-vindo ao meu Portfólio!',
+    about: 'Sobre',
+    skills: 'Habilidades',
+    projects: 'Projetos',
+    contact: 'Contatos',
+    hello: 'Olá, eu sou o',
+    role: 'Desenvolvedor full-stack',
+    contact_btn: 'Entrar em contato',
+    about_me_title: 'Sobre mim',
+    about_me_text:
+      'Desenvolvedor Fullstack em formação e estudante de Ciência da Computação, possuo experiência com JavaScript (Node.js), HTML, CSS, Tailwind CSS, Python e MySQL, com foco na criação de aplicações web modernas, funcionais e bem estruturadas. Estou em constante evolução, sempre buscando aprender novas tecnologias e boas práticas, e procuro uma oportunidade para aplicar meus conhecimentos, crescer profissionalmente e contribuir com projetos reais.',
+    all_projects: 'Todos os projetos',
+    login_project: 'Tela de Login',
+    android_project: 'Projeto Android',
+    social_project: 'Projeto Redes Sociais',
+    cordel_project: 'Projeto Cordel',
+    date_aug_2025: 'Agosto 2025',
+    see_more: 'ver mais',
+    contacts: 'Contatos',
+    phone: 'Telefone'
   },
 
   en: {
-    nav: {
-      about: "About",
-      skills: "Skills",
-      projects: "Projects",
-      contact: "Contact"
-    },
-    hero: {
-      title: "Hi, I'm Gustavo Loiola!",
-      subtitle: "Full Stack Developer"
-    },
-    sections: {
-      about: "About me",
-      skills: "Skills",
-      projects: "Projects",
-      contact: "Contact"
-    }
+    title: 'Gustavo Loiola | Full Stack Developer',
+    portfolio: 'Portfolio',
+    welcome: 'Welcome to my Portfolio!',
+    about: 'About',
+    skills: 'Skills',
+    projects: 'Projects',
+    contact: 'Contact',
+    hello: 'Hi, I am',
+    role: 'Full Stack Developer',
+    contact_btn: 'Contact me',
+    about_me_title: 'About me',
+    about_me_text:
+      'Fullstack developer in training and Computer Science student, I have experience with JavaScript (Node.js), HTML, CSS, Tailwind CSS, Python, and MySQL, focusing on creating modern, functional, and well-structured web applications. I am constantly evolving, always seeking to learn new technologies and best practices, and I am looking for an opportunity to apply my knowledge, grow professionally, and contribute to real projects.',
+    all_projects: 'All projects',
+    login_project: 'Login Screen',
+    android_project: 'Android Project',
+    social_project: 'Social Media Project',
+    cordel_project: 'Cordel Project',
+    date_aug_2025: 'August 2025',
+    see_more: 'see more',
+    contacts: 'Contacts',
+    phone: 'Phone'
   }
 };
 
-// Aplica idioma
+// ================== FUNÇÃO ==================
 function setLanguage(lang) {
-  document.documentElement.setAttribute('lang', lang);
-
   document.querySelectorAll('[data-i18n]').forEach(el => {
-    const keys = el.dataset.i18n.split('.');
-    let text = translations[lang];
-
-    keys.forEach(k => {
-      if (text) text = text[k];
-    });
-
-    if (text) el.textContent = text;
+    const key = el.dataset.i18n;
+    if (translations[lang][key]) {
+      el.textContent = translations[lang][key];
+    }
   });
 
-  updateCurrentFlag(lang);
+  document.title = translations[lang].title;
+  document.documentElement.lang = lang === 'en' ? 'en' : 'pt-BR';
+
+  flag.src =
+    lang === 'en'
+      ? 'imagens/Flag_of_the_United_States.svg'
+      : 'imagens/Flag_of_Brazil.svg.png';
+
   localStorage.setItem('language', lang);
+  menuFlag.classList.remove('active');
 }
 
-// Idioma inicial
+// ================== CLIQUE NAS BANDEIRAS ==================
+flags.forEach(img => {
+  img.addEventListener('click', () => {
+    const lang = img.src.includes('United_States') ? 'en' : 'pt';
+    setLanguage(lang);
+  });
+});
+
+// ================== IDIOMA SALVO ==================
 const savedLang = localStorage.getItem('language') || 'pt';
 setLanguage(savedLang);
-
-
-/* ===============================
-   SELETOR DE IDIOMA (FLAGS)
-================================ */
-
-const languageSelector = document.querySelector('.language-selector');
-const currentLangBtn = languageSelector.querySelector('.language-current');
-const languageOptions = languageSelector.querySelector('.language-options');
-
-// Abrir / fechar dropdown
-currentLangBtn.addEventListener('click', (e) => {
-  e.stopPropagation();
-  languageOptions.classList.toggle('active');
-});
-
-// Clicar em uma bandeira
-languageOptions.querySelectorAll('button').forEach(btn => {
-  btn.addEventListener('click', () => {
-    setLanguage(btn.dataset.lang);
-    languageOptions.classList.remove('active');
-  });
-});
-
-// Fechar ao clicar fora
-document.addEventListener('click', () => {
-  languageOptions.classList.remove('active');
-});
-
-// Atualiza bandeira principal
-function updateCurrentFlag(lang) {
-  const img = currentLangBtn.querySelector('img');
-  img.src =
-    lang === 'pt'
-      ? 'imagens/Flag_of_Brazil.svg.png'
-      : 'imagens/Flag_of_the_United_States.svg';
-  img.alt = lang === 'pt' ? 'Português' : 'English';
-}
