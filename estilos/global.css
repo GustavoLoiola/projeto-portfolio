@@ -20,17 +20,36 @@ Bordas/divisórias
 
 */
 
+
+/* ===== TEMA PADRÃO (ESCURO) ===== */
 :root {
-    --background_principal_azul_quase_preto: #0B0F1A;
-    --background_secundário_cards: #141A2A;
+    --bg_principal: #0B0F1A;
+    --background_secundário_cards: #EAEAF0;
     --primária_azul_escuro_tecnológico: #1E2A5A;
     --secundária_roxo_elegante: #6D5DFB;
     --acento_roxo_vibrante: #8F7CFF;
     --texto_principal: #EAEAF0;
     --texto_secundario: #B3B6C5;
     --roxo_luminoso: #C609FA;
-
 }
+
+
+/* ===== TEMA CLARO ===== */
+html[data-theme="light"] {
+  --bg_principal: #f9fafb;
+  --bg_secundario: #ffffff;
+  --background_secundário_cards: #EAEAF0;
+
+  --texto_principal: #0f1220;
+  --texto_secundario: #4b5563;
+
+  --primaria_azul_escuro_tecnologico: #2563eb;
+  --secundaria_roxo_elegante: #6d28d9;
+
+  --borda_sutil: rgba(0, 0, 0, 0.08);
+}
+
+
 
 html {
     scroll-behavior: smooth;
@@ -42,9 +61,9 @@ html {
 }
 
 body {
-    background-color:  var(--background_principal_azul_quase_preto, #000000);
+    background-color:  var(--bg_principal, black);
     color: var(--texto_principal);
     font-family: "inter", sans-serif;
+    transition:  background-color 0.6s ease,
+    color 0.6s ease;
 }
-
-/* TESTE DE MENU*/

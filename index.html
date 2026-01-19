@@ -3,15 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfófio | Gustavo Loiola</title>
-
+  <title>Gustavo Loiola | Desenvolvedor Full Stack</title>
   <link rel="shortcut icon" href="imagens/code_icon.png" type="image/x-icon">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
-
   <link rel="stylesheet" href="estilos/global.css">
   <link rel="stylesheet" href="estilos/header.css">
   <link rel="stylesheet" href="estilos/main.css">
@@ -20,6 +16,7 @@
   <link rel="stylesheet" href="estilos/footer.css">
 </head>
 <body>
+    <div class="header-wrapper">
    <header>
     <span class="material-symbols-outlined" id="hamburguer" translate="no">menu</span>
     <nav id="menu" class="menu_principal">
@@ -33,12 +30,14 @@
     <h1>Portfólio</h1>
     <div id="button_flag">
         <label class="toggle">
-            <input type="checkbox">
+            <input type="checkbox" aria-label="Alternar modo claro e escuro">
             <span class="slider"></span>
         </label>
-        <img src="imagens/Flag_of_Brazil.svg.png" alt="Bandeira">
+        <img src="imagens/Flag_of_Brazil.svg.png" alt="Bandeira do Brasil">
     </div>
+    
    </header>
+   </div>
    
    <div id="line"></div>
 
@@ -49,7 +48,7 @@
         <h2>Desenvolvedor full-stack</h2>
             <div id="contact_buttons">
                 <div id="cv"><a href="extras/Gustavo_Loiola_Curriculo.pdf" download="Gustavo_Loiola_Curriculo.pdf">Download CV</a></div>
-                <div id="contact_button"><p>Entrar em contato</p></div>
+                <div id="contact_button"><a href="#contact">Entrar em contato</a></div>
             </div>
     </div>
     <div id="photo">
@@ -134,7 +133,7 @@
             <div class="technologies"></div>
             <div class="more">
                 <p>Agosto 2025</p>
-                <a>ver mais</a>
+                <a href="#">ver mais</a>
             </div>
         </div>
         <div class="project" id="mario">
@@ -142,7 +141,7 @@
             <div class="technologies"></div>
             <div class="more">
                 <p>Agosto 2025</p>
-                <a>ver mais</a>
+                <a href="#">ver mais</a>
             </div>
         </div>
 
@@ -151,7 +150,7 @@
             <div class="technologies"></div>
             <div class="more">
                 <p>Agosto 2025</p>
-                <a>ver mais</a>
+                <a href="#">ver mais</a>
             </div>
         </div>
 
@@ -163,7 +162,7 @@
             </div>
             <div class="more">
                 <p>Agosto 2025</p>
-                <a>ver mais</a>
+                <a href="#">ver mais</a>
             </div>
         </div>
 
@@ -172,7 +171,7 @@
             <div class="technologies"></div>
             <div class="more">
                 <p>Agosto 2025</p>
-                <a>ver mais</a>
+                <a href="#">ver mais</a>
             </div>
         </div> 
 
@@ -181,7 +180,7 @@
             <div class="technologies"></div>
             <div class="more">
                 <p>Agosto 2025</p>
-                <a>ver mais</a>
+                <a href="#">ver mais</a>
             </div>
         </div>
 
@@ -193,7 +192,7 @@
 
     <section>
         <div class="contact_area">
-            <a href="mailto:gusantanaloiola" target="_blank">
+            <a href="mailto:gusantanaloiola@gmail.com" target="_blank">
                 <div><img src="imagens/email-envelope-outline-shape-with-rounded-corners_icon-icons.com_56530.png" alt="Email icon"></div>
                 <h2>Email</h2>
                 <p>Gusantanaloiola@gmail.com</p>
@@ -227,5 +226,6 @@
    </footer>
 
 <script src="scripts/menu.js"></script>
+<script src="scripts/light.js"></script>
 </body>
 </html>

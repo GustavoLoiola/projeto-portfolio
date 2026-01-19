@@ -79,8 +79,10 @@ div#contact_buttons > div#contact_button {
     transition: 0.4s;
 }
 
-div#contact_buttons > div#contact_button > p {
+div#contact_buttons > div#contact_button > a {
     font-size: clamp(0.5rem, 2vw, 1rem);
+    text-decoration: none;
+    color: var(--texto_principal);
 }
 
 div#contact_buttons > div#contact_button:hover {
@@ -104,7 +106,7 @@ div#photo::before {
     background: linear-gradient(135deg,
     var(--roxo_luminoso),
     var(--acento_roxo_vibrante),
-    var(--background_secundário_cards)
+    var(--secundária_roxo_elegante)
     );
     
     z-index: -1;

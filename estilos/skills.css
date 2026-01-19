@@ -58,7 +58,7 @@ div.skill > div.skill_line {
 
 div.skill > p {
     text-align: center;
-    color: var(--texto_secundario);
+    color: var(--background_secundário_cards);
 }
 
 div.skill > img {

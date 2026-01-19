@@ -169,7 +169,7 @@ section#projects > div#all > div.project::before {
 }
 
 div.project > p {
-    color: var(--texto_principal);
+    color: var(--background_secundário_cards);
 }
 
 div.project > div.technologies > img {
