@@ -1,24 +1,56 @@
 header {
-  display: flex;
-  position: relative;
-  z-index: 1200;
-  justify-content: space-between;
-  align-items: center;
+  width: 100%;
+  position: sticky;
+  background-color: var(--bg_principal);
+  top: 0;
+  z-index: 1300;
+}
 
-  
-  height: 10vh;
-  width: 90%;
-  margin: auto;
+#header_inner {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-right: auto;
+    margin-left: auto;
+    width: 90%;
 }
 
 /* menu fechado */
 .menu_principal {
-  display: none;
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 0px;
+  padding-top: 150px;
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  padding-bottom: 80px;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transform: scale(0.95);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+
+  z-index: 1100;
 }
 
 /* menu aberto */
 header.menu-open .menu_principal {
-  display: flex;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: scale(1);
 }
 
 #hamburguer {
@@ -39,38 +71,9 @@ header > #hamburguer:hover {
   transition: 0.2s;
 }
 
-.menu_principal {
-  position: fixed;
-  inset: 0;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-  padding-bottom: 80px;
-
-  opacity: 0;
-  visibility: hidden;
-  transform: scale(0.95);
-
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  z-index: 1000;
-}
-
-header.menu-open .menu_principal {
-  opacity: 1;
-  visibility: visible;
-  transform: scale(1);
-}
-
 .no-scroll {
   overflow: hidden;
 }
-
 
 .menu_principal > h3 {
   text-align: center;
@@ -91,7 +94,7 @@ header.menu-open .menu_principal {
 }
 
 
-header > h1 {
+#header_inner > h1 {
   z-index: 1300;
   position: absolute;
   left: 50%;
@@ -179,11 +182,11 @@ header > h1 {
   }
 }
 
-div#line::after {
+header::after {
   content: "";
   position: absolute;
   width: 100%;
-  height: 1px;
+  height: 0.1em;
   background-color: var(--primária_azul_escuro_tecnológico);
 
 }
@@ -210,7 +213,6 @@ div#button_flag > img {
 #menu_flag {
   position: absolute;
   top: 100%;
-  right: 0;
 
   display: flex;
   flex-direction: column;

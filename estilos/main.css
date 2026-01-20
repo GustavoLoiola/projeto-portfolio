@@ -13,17 +13,15 @@ div#hello {
     width: 100%;
 }
 
-div#hello > h1 > span.name {
-    color: var(--secundária_roxo_elegante);
-    font-size: clamp(1.3rem, 5vw, 3rem);
-    margin-bottom: 0;
+div#hello > h1 > span {
+  display: block;
+  font-size: clamp(1.3rem, 5vw, 3rem);
 }
 
-div#hello > h1 > span {
-    color: var(--texto_principal);
-    font-size: clamp(1.3rem, 5vw, 3rem);
-    width: auto;
+div#hello > h1 > span.name {
+  color: var(--secundária_roxo_elegante);
 }
+
 
 div#hello > h2 {
     font-size: clamp(0.9rem, 3vw, 1.5rem);
