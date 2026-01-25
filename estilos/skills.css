@@ -1,8 +1,18 @@
 section#skills {
-    width: 90%;
-    margin: auto;
-    margin-top: 80px;
+  width: 90%;
+  margin: auto;
+  margin-top: 80px;
+
+  transform: translateX(-300px);
+  opacity: 0;
+  transition: 0.6s ease;
 }
+
+section#skills.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
 
 section#skills > h1 {
     text-align: center;
