@@ -13,12 +13,12 @@ div#hello {
     width: 100%;
 }
 
-div#hello > h1 > span {
+div#hello > h1#spanNames > span {
   display: block;
   font-size: clamp(1.3rem, 5vw, 3rem);
 }
 
-div#hello > h1 > span.name {
+div#hello > h1#spanNames > span.name {
   color: var(--secundária_roxo_elegante);
 }
 
