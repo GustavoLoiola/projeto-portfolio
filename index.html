@@ -22,7 +22,7 @@
         <nav id="menu" class="menu_principal">
             <h3 data-i18n="welcome">Bem-vindo ao meu Portfólio!</h3>
             <a href="#about_me" data-i18n="about">Sobre</a>
-            <a href="#skills" data-i18n="skills">Habilidades</a>
+            <a href="#h1skills" data-i18n="skills">Habilidades</a>
             <a href="#projects" data-i18n="projects">Projetos</a>
             <a href="#contact" data-i18n="contact">Contatos</a>
         </nav>
@@ -47,7 +47,7 @@
     <div id="hello">
         <h1 id="spanNames">
             <span data-i18n="hello" id="hi">Olá, eu sou o</span>
-            <span class="name">Gustavo Loiola!</span>
+            <span id="name">Gustavo Loiola!</span>
         </h1>
 
         <h2 data-i18n="role">Desenvolvedor full-stack</h2>
@@ -67,7 +67,7 @@
    </article>
 
    <section id="skills">
-    <h1 data-i18n="skills">Habilidades</h1>
+    <h1 data-i18n="skills" id="h1skills">Habilidades</h1>
     <div id="skills_area">
         <div class="skill">
             <div class="skill_line"></div>
@@ -199,7 +199,7 @@
             <a href="mailto:gusantanaloiola@gmail.com" target="_blank">
                 <div><img src="imagens/email-envelope-outline-shape-with-rounded-corners_icon-icons.com_56530.png" alt="Email icon"></div>
                 <h2>Email</h2>
-                <p>Gusantanaloiola@gmail.com</p>
+                <p>gusantanaloiola@gmail.com</p>
             </a>
         </div>
 
@@ -229,9 +229,33 @@
     </section>
    </footer>
 
+
+<div id="modal">
+  <div class="modal-content">
+    <span class="material-symbols-outlined" id="close" translate="no">close</span>
+    <div id="top">
+        <div id="project_img"><img src="imagens/Flag_of_Brazil.svg.png" alt=""></div>
+        <div id="infos">
+            <h3>tittle</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum tempore, possimus corporis veniam placeat, nobis in expedita tempora facere natus nisi dolorem ratione impedit reiciendis dicta repudiandae nam enim provident?
+            Tempore, deserunt porro accusantium a commodi eius fugit nostrum vel ratione aliquid quam illum laudantium odit doloribus rem voluptate iusto cumque autem ut fugiat pariatur architecto perspiciatis dolorem! Minus, enim!
+            Alias iusto quia debitis et amet ipsa, beatae quis odit dolorem, commodi tempora sed a repudiandae sit deleniti blanditiis eum reprehenderit nihil velit officiis ex ea.</p>
+            <p id="project_data">data</p>
+        </div>
+    </div>
+    <div id="project_links">
+        <a href="#">Acessar repositório</a>
+        <a href="#">Ver Projeto</a>
+    </div>
+  </div>
+</div>
+
+
+
 <script src="scripts/menu.js"></script>
 <script src="scripts/light.js"></script>
 <script src="scripts/language.js"></script>
 <script src="scripts/animation.js"></script>
+<script src="scripts/modal.js"></script>
 </body>
 </html>

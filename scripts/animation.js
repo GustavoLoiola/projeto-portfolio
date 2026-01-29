@@ -4,7 +4,6 @@ function revealSkills() {
   const windowHeight = window.innerHeight;
   const skillsTop = skills.getBoundingClientRect().top;
 
-  
   if (skillsTop < windowHeight - 150) {
     skills.classList.add('active');
   } else {
@@ -20,20 +19,34 @@ window.addEventListener('load', revealSkills);
 
 
 
+function typingText(element, speed = 80) {
+  return new Promise(resolve => {
+    const text = element.textContent.trim()
+    element.textContent = ''
+    element.style.visibility = 'visible'
 
-const span = document.getElementById('hi')
-const textoCompleto = span.textContent
-const letras = textoCompleto.split('')
+    let index = 0
 
-span.textContent = '' // limpa o texto antes de começar
+    const typing = setInterval(() => {
+      element.textContent += text[index]
+      index++
 
-let index = 0
+      if (index === text.length) {
+        clearInterval(typing)
+        resolve()
+      }
+    }, speed)
+  })
+}
 
-const typingEffect = setInterval(() => {
-  span.textContent += letras[index]
-  index++
+async function startTyping() {
+  const hi = document.getElementById('hi')
+  const name = document.getElementById('name')
+  const role = document.querySelector('[data-i18n="role"]')
 
-  if (index === letras.length) {
-    clearInterval(typingEffect)
-  }
-}, 90)
+  await typingText(hi, 90)
+  await typingText(name, 90)
+  await typingText(role, 90)
+}
+
+startTyping()

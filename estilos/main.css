@@ -16,9 +16,10 @@ div#hello {
 div#hello > h1#spanNames > span {
   display: block;
   font-size: clamp(1.3rem, 5vw, 3rem);
+  visibility: hidden;
 }
 
-div#hello > h1#spanNames > span.name {
+div#hello > h1#spanNames > span#name {
   color: var(--secundária_roxo_elegante);
 }
 
@@ -26,6 +27,7 @@ div#hello > h1#spanNames > span.name {
 div#hello > h2 {
     font-size: clamp(0.9rem, 3vw, 1.5rem);
     color: var(--texto_secundario);
+    visibility: hidden;
 }
 
 div#contact_buttons {
