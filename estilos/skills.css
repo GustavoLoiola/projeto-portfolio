@@ -75,6 +75,11 @@ div.skill > img {
     height: 70px;
 }
 
+#js {
+    width: 60px;
+    height: 60px;
+}
+
 div.skill > svg {
     width: 70px;
     height: 70px;

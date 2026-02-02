@@ -87,6 +87,29 @@ section#projects > div#all > div.project:hover > div.technologies {
     transform: translateY(10px);
 }
 
+div.technologies {
+  display: flex;
+}
+
+div.technologies > .tech {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+    padding: 4px;
+    box-sizing: border-box;
+}
+
+div.technologies .tech img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+
 section#projects > div#all > div.project:hover {
     transform: scale(1.1);
     background-color: white;
@@ -156,11 +179,17 @@ div.project > div.more > a {
 
   opacity: 0;
   transform: scale(0.9);
+  transition: ease 0.6s;
 }
 
-/* anima SOMENTE quando hover */
 div.project:hover > div.more > a {
   animation: aparecer 0.9s ease-out forwards;
+}
+
+div.project > div.more > a:hover {
+    border: 1px solid var(--background_secundário_cards);
+    filter: brightness(1.25);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.25);
 }
 
 
@@ -172,13 +201,9 @@ div.project > p {
     color: var(--background_secundário_cards);
 }
 
-div.project > div.technologies > img {
-   width: 30px;
-   height: 40px;
-}
 
 #dalia {
-    background-image: url(../imagens/prints/cordel.jpeg);
+    background-image: url(../imagens/prints/dalia.jpeg);
 }
 
 #mario {

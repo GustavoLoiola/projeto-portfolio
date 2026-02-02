@@ -62,7 +62,7 @@ div#contact_buttons > div#cv:hover {
 div#contact_buttons > div#cv > a {
     text-decoration: none;
     color: var(--texto_principal);
-    font-size: clamp(0.7rem, 2vw, 1rem);
+    font-size: clamp(0.6rem, 2vw, 0.8rem);
 }
 
 div#contact_buttons > div#contact_button {
