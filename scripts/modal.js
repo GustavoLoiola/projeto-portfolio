@@ -31,7 +31,7 @@ const projects = {
     date: "Maio / 2025",
     image: "imagens/prints/login.jpeg",
     repo: "https://github.com/GustavoLoiola/projeto-login",
-    demo: "https://gustavoloiola.github.io/projeto-login/"
+    demo: "https://projeto-login-9wn2.onrender.com/"
   },
 
   android: {
