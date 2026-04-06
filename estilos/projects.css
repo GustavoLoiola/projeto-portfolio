@@ -88,7 +88,7 @@ section#projects > div#all > div.project:hover > div.technologies {
 }
 
 div.technologies {
-  display: flex;
+    display: flex;
 }
 
 div.technologies > .tech {
@@ -225,6 +225,10 @@ div.project > p {
 
 #cordel {
     background-image: url(../imagens/prints/cordel.jpeg);
+}
+
+#clima {
+    background-image: url(../imagens/prints/clima.jpeg);
 }
 
 

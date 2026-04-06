@@ -61,6 +61,15 @@ const projects = {
     demo: "https://gustavoloiola.github.io/projeto-cordel/"
   },
 
+  clima: {
+    title: "Projeto Clima",
+    description: "Esse projeto é uma aplicação de previsão do tempo desenvolvida com HTML, CSS e JavaScript, com foco no consumo de APIs externas. Ele permite ao usuário buscar cidades e visualizar informações como temperatura, descrição do clima, umidade e ícones representativos. A aplicação também conta com alteração dinâmica do plano de fundo de acordo com as condições climáticas e a temperatura, tornando a experiência mais interativa.Durante o desenvolvimento, foram aplicados conceitos importantes como requisições assíncronas com fetch, tratamento de erros e manipulação do DOM. O projeto foi fundamental para consolidar o aprendizado em integração com APIs e lógica de programação, servindo como base para o desenvolvimento de aplicações front-end mais completas.",
+    date: "Março / 2026",
+    image: "imagens/prints/clima.jpeg",
+    repo: "https://github.com/GustavoLoiola/projeto-clima",
+    demo: "https://gustavoloiola.github.io/projeto-clima/"
+  },
+
 }
 
 const projectTranslations = {
@@ -94,7 +103,17 @@ const projectTranslations = {
       title: "Cordel Project",
       description: "The Cordel project was my second project developed with HTML and CSS and played an important role in my learning process, even though it was a simple website structure. It was fundamental for me to study and better understand the parallax effect, especially in the use and behavior of images during page scrolling. Through this project, I explored visual and positioning concepts that contributed to broadening my perception of design and user experience, understanding how small details can enrich the presentation of a website. Cordel represents an important step in my initial evolution as a developer, serving as a basis for more complex projects I developed later.",
       date: "March / 2025"
-    }
+    },
+
+    clima: {
+    title: "Weather Project",
+    description: "This project is a weather forecasting application developed with HTML, CSS, and JavaScript, focusing on consuming external APIs. It allows the user to search for cities and view information such as temperature, weather description, humidity, and representative icons. The application also features dynamic background changes according to weather conditions and temperature, making the experience more interactive. During development, important concepts such as asynchronous requests with fetch, error handling, and DOM manipulation were applied. The project was fundamental in consolidating learning in API integration and programming logic, serving as a basis for the development of more complete front-end applications.",
+    date: "March / 2026",
+    image: "imagens/prints/clima.jpeg",
+    repo: "https://github.com/GustavoLoiola/projeto-clima",
+    demo: "https://gustavoloiola.github.io/projeto-clima/"
+  },
+
   }
 };
 
