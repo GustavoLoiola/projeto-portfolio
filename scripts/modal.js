@@ -27,7 +27,7 @@ const projects = {
 
   login: {
     title: "Tela de Login",
-    description: "O projeto da tela de login consiste no desenvolvimento de um sistema de autenticação fullstack, criado com o objetivo de praticar e consolidar conhecimentos tanto no front-end quanto no back-end. A aplicação foi desenvolvida utilizando HTML, CSS, Node.js e PostgreSQL, permitindo compreender na prática como ocorre a comunicação entre a interface, o servidor e o banco de dados em uma aplicação web completa.No front-end, desenvolvi a interface com HTML e CSS, com foco no uso de Flexbox para organizar e alinhar os elementos da página.  Também trabalhei a responsividade, garantindo que a interface se adapte corretamente a diferentes tamanhos de tela, oferecendo uma boa experiência tanto em computadores quanto em dispositivos móveis.No back-end, criei uma API em Node.js responsável por gerenciar a comunicação entre a aplicação e o banco de dados, realizando operações como cadastro e autenticação de usuários. Para aumentar a segurança do sistema, utilizei o bcrypt para criptografar as senhas antes de armazená-las no banco, evitando que informações sensíveis fiquem salvas em texto puro. Para o armazenamento de dados, utilizei o PostgreSQL, um sistema de banco de dados relacional amplamente utilizado no mercado. Além disso, também trabalhei com infraestrutura e hospedagem, utilizando o Render para hospedar o servidor e conectar o banco de dados ao projeto, permitindo que a aplicação funcione fora do ambiente local. Esse projeto foi importante para fortalecer minha base em desenvolvimento web fullstack, especialmente na integração entre interface, API e banco de dados, além de proporcionar experiência prática com responsividade, estruturação de layouts e segurança em aplicações web.",
+    description: "Projeto de autenticação fullstack desenvolvido para praticar a integração entre front-end e back-end. A aplicação foi construída com HTML, CSS, Node.js e PostgreSQL, permitindo o cadastro e login de usuários por meio de uma API conectada ao banco de dados. No front-end, foram aplicados conceitos de Flexbox e responsividade para criar uma interface adaptável a diferentes dispositivos. No back-end, foi desenvolvida uma API em Node.js com autenticação segura utilizando bcrypt para criptografia de senhas. O projeto também foi hospedado utilizando o Render, proporcionando experiência prática com deploy e integração de serviços. Esse projeto foi fundamental para consolidar conhecimentos em desenvolvimento web fullstack, banco de dados, segurança e consumo de APIs.",
     date: "Maio / 2025",
     image: "imagens/prints/login.jpeg",
     repo: "https://github.com/GustavoLoiola/projeto-login",
@@ -70,6 +70,15 @@ const projects = {
     demo: "https://gustavoloiola.github.io/projeto-clima/"
   },
 
+  sudoku: {
+    title: "Projeto sudoku",
+    description: "Projeto desenvolvido durante o Bootcamp da DIO utilizando Java e Java Swing. A aplicação consiste em um jogo de Sudoku com interface gráfica, criado para colocar em prática conceitos de Programação Orientada a Objetos (POO), organização de código e lógica de programação. Durante o desenvolvimento, foram implementadas as regras do jogo, validação das jogadas e interação com o usuário por meio de uma interface desktop. Este projeto foi fundamental para consolidar meus conhecimentos em Java e no desenvolvimento de aplicações orientadas a objetos. ⚠️ Este jogo requer o Java 17 ou superior para ser executado. Certifique-se de ter o Java instalado antes de abrir o arquivo .jar.",
+    date: "Junho / 2026",
+    image: "imagens/prints/sudoku-g.png",
+    repo: "https://github.com/GustavoLoiola/projeto-sudoku",
+    demo: "https://gustavoloiola.github.io/projeto-clima/"
+  }
+
 }
 
 const projectTranslations = {
@@ -86,7 +95,7 @@ const projectTranslations = {
     },
     login: {
       title: "Login Screen",
-      description: "The login screen project consists of developing a full-stack authentication system, created with the goal of practicing and consolidating knowledge in both front-end and back-end development. The application was developed using HTML, CSS, Node.js, and PostgreSQL, allowing for a practical understanding of how communication occurs between the interface, the server, and the database in a complete web application. On the front-end, I developed an interface using HTML and CSS, focusing on the use of Flexbox to organize and align page elements. I also worked on responsiveness, ensuring that the interface adapts correctly to different screen sizes, offering a good experience on both computers and mobile devices. On the back-end, I created a Node.js API responsible for managing communication between the application and the database, performing operations such as user registration and authentication. To increase system security, I used bcrypt to encrypt passwords before storing them in the database, preventing sensitive information from being saved in plain text. For data storage, we used PostgreSQL, a related and widely used database system in the market. In addition, I also worked with infrastructure and hosting, using Render to host the server and connect the database to the project, allowing the application to function outside the local environment. This project was important in strengthening my foundation in full-stack web development, especially in the integration between interface, API, and database, as well as providing practical experience with responsiveness, layout structuring, and security in web applications.",
+      description: "This full-stack authentication project was developed to practice front-end and back-end integration. The application was built using HTML, CSS, Node.js, and PostgreSQL, allowing user registration and login via an API connected to the database. On the front-end, Flexbox and responsiveness concepts were applied to create an interface adaptable to different devices. On the back-end, a Node.js API was developed with secure authentication using bcrypt for password encryption. The project was also hosted using Render, providing practical experience with deployment and service integration. This project was fundamental in consolidating knowledge in full-stack web development, databases, security, and API consumption.",
       date: "May / 2025"
     },
     android: {
@@ -100,7 +109,7 @@ const projectTranslations = {
       date: "April / 2025"
     },
     cordel: {
-      title: "Cordel Project",
+      title: "Sudoku Project",
       description: "The Cordel project was my second project developed with HTML and CSS and played an important role in my learning process, even though it was a simple website structure. It was fundamental for me to study and better understand the parallax effect, especially in the use and behavior of images during page scrolling. Through this project, I explored visual and positioning concepts that contributed to broadening my perception of design and user experience, understanding how small details can enrich the presentation of a website. Cordel represents an important step in my initial evolution as a developer, serving as a basis for more complex projects I developed later.",
       date: "March / 2025"
     },
@@ -114,6 +123,14 @@ const projectTranslations = {
     demo: "https://gustavoloiola.github.io/projeto-clima/"
   },
 
+  sudoku: {
+    title: "Sudoku Project",
+    description: "This project was developed during the DIO Bootcamp using Java and Java Swing. The application consists of a Sudoku game with a graphical interface, created to put into practice concepts of Object-Oriented Programming (OOP), code organization, and programming logic. During development, the game rules, move validation, and user interaction through a desktop interface were implemented. This project was fundamental in consolidating my knowledge of Java and object-oriented application development. ⚠️ This game requires Java 17 or higher to run. Make sure you have Java installed before opening the .jar file.",
+    date: "March / 2026",
+    image: "imagens/prints/clima.jpeg",
+    repo: "https://github.com/GustavoLoiola/projeto-clima",
+    demo: "https://gustavoloiola.github.io/projeto-clima/"
+  }
   }
 };
 

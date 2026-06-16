@@ -2,7 +2,7 @@ const flag = document.getElementById('flag');
 const menuFlag = document.getElementById('menu_flag');
 const flags = menuFlag.querySelectorAll('img');
 
-// ================== MENU ==================
+// MENU 
 flag.addEventListener('click', (e) => {
   e.stopPropagation();
   menuFlag.classList.toggle('active');
@@ -85,7 +85,7 @@ const translations = {
   }
 };
 
-// ================== FUNÇÃO ==================
+// FUNÇÃO
 function setLanguage(lang) {
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.dataset.i18n;
@@ -106,7 +106,7 @@ function setLanguage(lang) {
   menuFlag.classList.remove('active');
 }
 
-// ================== CLIQUE NAS BANDEIRAS ==================
+// CLIQUE NAS BANDEIRAS
 flags.forEach(img => {
   img.addEventListener('click', () => {
     const lang = img.src.includes('United_States') ? 'en' : 'pt';

@@ -49,8 +49,6 @@ html[data-theme="light"] {
   --borda_sutil: rgba(0, 0, 0, 0.08);
 }
 
-
-
 html {
     scroll-behavior: smooth;
 }

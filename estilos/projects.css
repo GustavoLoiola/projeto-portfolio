@@ -231,6 +231,10 @@ div.project > p {
     background-image: url(../imagens/prints/clima.jpeg);
 }
 
+#sudoku {
+    background-image: url(../imagens/prints/sudoku.png);
+}
+
 
 #modal {
     position: fixed;
@@ -325,8 +329,10 @@ div.project > p {
 
 #project_links {
     display: flex;
+    justify-self: end;
     gap: 16px;
     flex-wrap: wrap;
+    margin-top: 20px;
 }
 
 #project_links a {
