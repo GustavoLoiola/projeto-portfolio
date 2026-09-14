@@ -12,7 +12,8 @@ document.querySelectorAll("[data-project]").forEach(link => {
             btnProjeto.textContent = "Baixar Jogo";
             btnProjeto.href = "files/sudoku.jar";
             btnProjeto.download = "sudoku.jar";
-        } else {
+        }
+        else {
             btnProjeto.textContent = "Ver Projeto";
             btnProjeto.removeAttribute("download");
         }

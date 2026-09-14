@@ -46,7 +46,7 @@ const translations = {
     contacts: 'Contatos',
     phone: 'Telefone',
     view_repository:'Ver repositório',
-    view_project:'Ver projeto'
+    view_project:'Ver projeto',
   },
 
   en: {
@@ -80,8 +80,8 @@ const translations = {
     see_more: 'see more',
     contacts: 'Contacts',
     phone: 'Phone',
-    view_repository:'view repository',
-    view_project:' view project'
+    view_repository:'View repository',
+    view_project:' View project'
   }
 };
 
