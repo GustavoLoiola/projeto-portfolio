@@ -15,14 +15,6 @@ const projects = {
   image: "imagens/prints/mario.jpeg",
   repo: "https://github.com/GustavoLoiola/projeto-mario",
   demo: "https://gustavoloiola.github.io/projeto-mario/",
-    date: "Em Desenvolvimento",
-    image: "imagens/prints/cordel.jpeg",
-    repo: "https://github.com/GustavoLoiola/projeto-cordel",
-    demo: "https://gustavoloiola.github.io/projeto-cordel/",
-    date: "Outubro / 2025",
-    image: "imagens/prints/mario.jpeg",
-    repo: "https://github.com/GustavoLoiola/projeto-mario",
-    demo: "https://gustavoloiola.github.io/projeto-mario/"
   },
 
   login: {
@@ -77,6 +69,15 @@ const projects = {
     image: "imagens/prints/sudoku-g.png",
     repo: "https://github.com/GustavoLoiola/projeto-sudoku",
     demo: "https://gustavoloiola.github.io/projeto-clima/"
+  },
+
+  produtos: {
+    title: "Cadastro de produtos",
+    description: "Projeto desenvolvido para consolidar e aprofundar meus conhecimentos em Back-end com Java e Spring Boot, com foco na construção de uma API REST, autenticação, autorização e integração com banco de dados. O sistema possui autenticação e controle de acesso por roles, utilizando Spring Security. Usuários com a role ADMIN possuem acesso completo ao CRUD de produtos, podendo cadastrar, consultar, atualizar e excluir produtos. Já usuários com a role USER possuem acesso somente à visualização dos produtos disponíveis no estoque.Também foram implementadas validações e regras de segurança para controlar o acesso aos diferentes endpoints da aplicação.Todo o sistema é integrado a um banco de dados MySQL, responsável pelo armazenamento dos usuários e dos produtos cadastrados. Front-end, utilizei HTML, CSS e JavaScript, desenvolvendo uma interface simples, agradável e intuitiva para interação com a API",
+    date: "Setembro / 2026",
+    image: "gravacoes/Gravando-tela-cadastro-produtos.mp4",
+    repo: "https://github.com/GustavoLoiola/projeto-cadastro",
+    demo: "https://gustavoloiola.github.io/projeto-cadastro/"
   }
 
 }
@@ -130,21 +131,56 @@ const projectTranslations = {
     image: "imagens/prints/clima.jpeg",
     repo: "https://github.com/GustavoLoiola/projeto-clima",
     demo: "https://gustavoloiola.github.io/projeto-clima/"
-  }
-  }
-};
+  },
 
+  produtos: {
+    title: "Product registration",
+    description: "This project was developed to consolidate and deepen my back-end skills using Java and Spring Boot, focusing on building a REST API, implementing authentication and authorization, and integrating with a database. The system features authentication and role-based access control powered by Spring Security. Users with the ADMIN role have full CRUD access to products—allowing them to create, view, update, and delete items—while users with the USER role are restricted to viewing products currently in stock. Validation logic and security rules were also implemented to manage access to the application's various endpoints. The entire system integrates with a MySQL database to store user data and registered products. For the front-end, I used HTML, CSS, and JavaScript to create a simple, user-friendly, and intuitive interface for interacting with the API.",
+    date: "September / 2026",
+    image: "imagens/prints/produtos.png",
+    repo: "https://github.com/GustavoLoiola/projeto-cadastro",
+    demo: "https://gustavoloiola.github.io/projeto-cadastro"
+  }
+}
+};
 
 const modal = document.getElementById("modal");
 const closeBtn = document.getElementById("close");
 
-const modalImg = document.querySelector("#project_img img");
+const modalImgContainer = document.getElementById("project_img");
 const modalTitle = document.getElementById("project_title");
 const modalDesc = document.getElementById("project_description");
 const modalDate = document.getElementById("project_data");
 
 const repoLink = document.querySelector("#project_links a:nth-child(1)");
 const demoLink = document.querySelector("#project_links a:nth-child(2)");
+
+const videoExtensions = [".mp4", ".webm", ".ogg", ".mov"];
+
+function isVideo(path) {
+  return videoExtensions.some(ext => path.toLowerCase().endsWith(ext));
+}
+
+function renderModalMedia(baseProject, translation) {
+  
+  modalImgContainer.innerHTML = "";
+
+  if (isVideo(baseProject.image)) {
+    const video = document.createElement("video");
+    video.src = baseProject.image;
+    video.controls = true;
+    video.autoplay = true;
+    video.muted = true; 
+    video.loop = true;
+    video.style.width = "100%"; 
+    modalImgContainer.appendChild(video);
+  } else {
+    const img = document.createElement("img");
+    img.src = baseProject.image;
+    img.alt = translation.title;
+    modalImgContainer.appendChild(img);
+  }
+}
 
 document.querySelectorAll(".project .more a").forEach(link => {
   link.addEventListener("click", e => {
@@ -160,8 +196,7 @@ document.querySelectorAll(".project .more a").forEach(link => {
 
     modal.dataset.project = projectKey;
 
-    modalImg.src = baseProject.image;
-    modalImg.alt = translation.title;
+    renderModalMedia(baseProject, translation);
 
     modalTitle.textContent = translation.title;
     modalDesc.textContent = translation.description;
@@ -178,12 +213,18 @@ document.querySelectorAll(".project .more a").forEach(link => {
 closeBtn.addEventListener("click", () => {
   modal.style.display = "none";
   document.body.style.overflow = "auto";
+
+  const video = modalImgContainer.querySelector("video");
+  if (video) video.pause();
 });
 
 modal.addEventListener("click", e => {
   if (e.target === modal) {
     modal.style.display = "none";
     document.body.style.overflow = "auto";
+
+    const video = modalImgContainer.querySelector("video");
+    if (video) video.pause();
   }
 });
 

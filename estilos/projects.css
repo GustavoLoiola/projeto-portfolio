@@ -235,6 +235,9 @@ div.project > p {
     background-image: url(../imagens/prints/sudoku.png);
 }
 
+#produtos {
+     background-image: url(../imagens/prints/produtos.png);
+}
 
 #modal {
     position: fixed;
@@ -357,7 +360,7 @@ div.project > p {
     );
 }
 
-/* ===== MOBILE ===== */
+/*MOBILE*/
 @media (max-width: 900px) {
     #top {
         flex-direction: column;
